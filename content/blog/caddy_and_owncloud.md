@@ -9,7 +9,7 @@ date: 2016-03-16 12:00:00+00:00
 
 In this post, I'll walk you through how to set up ownCloud with Caddy for a secure, personal cloud service. I wrote this guide while configuring on Ubuntu 14.
 
-**Update: Caddy's current release doesn't support WebDav yet, resulting in the desktop/mobile clients not working. Support for this is already included in the development branch, so you can either wait a until the next release, or compile Caddy yourself.**
+**Update: Caddy now supports WebDAV.**
 
 ownCloud
 --------
