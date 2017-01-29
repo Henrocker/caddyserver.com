@@ -92,7 +92,7 @@ If you need previews for videos and documents you also need to install the follo
 
 
 For optimal integration with Caddy, accepting PHP-FPM request on a TCP socket instead of a Unix socket is better:  
-Replace `listen = /run/php/php7.0-fpm.soc` to `listen = 127.0.0.1:9000` in `/etc/php/7.0/fpm/pool.d/www.conf`.
+Replace `listen = /run/php/php7.0-fpm.sock` to `listen = 127.0.0.1:9000` in `/etc/php/7.0/fpm/pool.d/www.conf`.
 
 
 *Don't forget to restart PHP-FPM: `sudo service php7.0-fpm restart` after installing all extensions.*
@@ -135,7 +135,7 @@ I made the following Caddyfile together with *mholt* and *dprandzioch*. The conf
         # .htacces / data / config / ... shouldn't be accessible from outside
         rewrite {
             r  ^/(?:\.htaccess|data|config|db_structure\.xml|README)
-            status 403
+            to status 403
         }
 
         header / Strict-Transport-Security "15768000"
